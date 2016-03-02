@@ -8,8 +8,8 @@ relative_permalinks: true
 
 # Setup
 title:            EV3RT
-tagline:          'RTOS on EV3'
-description:      'Development platform for Mindstorms EV3, based on Real Time Operating System. It''s simple, fast and yet with many features supported.'
+tagline:          'RTOS-based Platform for Mindstorms EV3'
+description:      'Program EV3 with RTOS!'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
@@ -20,7 +20,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          1.0.0
 
 github:
   repo:           https://github.com/poole/hyde
