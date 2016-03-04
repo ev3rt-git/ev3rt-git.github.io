@@ -10,12 +10,13 @@ relative_permalinks: true
 title:            EV3RT
 tagline:          'RTOS-based Platform for Mindstorms EV3'
 description:      'Program EV3 with RTOS!'
-url:              http://hyde.getpoole.com
+url:              https://ev3rt-git.github.io
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Yixiao Li'
+  url:            https://github.com/YixiaoLi
+  email:          liyixiao7@gmail.com
 
 paginate:         5
 
@@ -23,4 +24,4 @@ paginate:         5
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/ev3rt-git

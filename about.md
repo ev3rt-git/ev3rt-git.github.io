@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Get started
+title: What is EV3RT?
+sortttitle: 0
 ---
 
 EV3RT is an RTOS-based software platform that enables you to develop applications with tough timing constraints for the [LEGO® MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3).
