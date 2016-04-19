@@ -6,7 +6,7 @@ sorttitle: 1
 
 This step-by-step guide will show you how to install EV3RT, build a sample program and run it on your EV3 brick.
 
-# Step 0: Prepare your environment
+# Step 0: Check your environment
 
 Some packages are required to be installed before installing EV3RT:
 
@@ -20,25 +20,40 @@ Some packages are required to be installed before installing EV3RT:
 
 You can refer to following guides to install these dependencies:
 
-* [TODO:] Ubuntu 14.10 (Trusty Tahr)
-* [TODO:] Windows (Cygwin)
-* [TODO:] Mac OS X El Captain
+* Ubuntu 14.04 (Trusty Tahr)
+
+```bash
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt-get update
+sudo apt-get install gcc-arm-embedded u-boot-tools libboost1.55-all-dev
+```
+
+* [Windows (Cygwin)](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvWin) [Japanese only for now]
+* [Mac OS X (El Captain)](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvMac) [Japanese only for now]
 
 # Step 1: Get the source code
 
 ```bash
-git clone https://github.com/ev3rt-git/ev3rt-hrp2-base ev3rt-base
-git clone https://github.com/ev3rt-git/ev3rt-hrp2-sdk ev3rt-sdk
+git clone https://github.com/ev3rt-git/ev3rt-hrp2
+cd ev3rt-hrp2
+git submodule init
+git submodule update
 ```
 
-# Step 2: Download the configurator
+# Step 2: Prepare the configurator
 
-[TODO:] Add binary for OS X, Windows
+Build the configurator from source code by:
 
 ```bash
-cd ev3rt-base/cfg
+cd ev3rt-hrp2/cfg
 make
 ```
+Alternatively, pre-built binaries are also available for Windows and Mac OS X users:
+
+* [cfg 1.9.5 for Windows](https://www.toppers.jp/download.cgi/cfg-mingw-static-1_9_5.zip)
+* [cfg 1.9.5 for Mac OS X](https://www.toppers.jp/download.cgi/cfg-osx-static-1_9_5.tar.gz)
+
+Extract the downloaded package and put the configurator binary (cfg or cfg.exe) under the folder `ev3rt-hrp2/cfg/cfg`.
 
 # Step 3: Install EV3RT to the SD card
 
@@ -46,7 +61,7 @@ Following command will generate a `uImage` file if build succeeded.
 `uImage` is the bootable system image of EV3RT which includes components such as RTOS kernel, device drivers and the application loader.
 
 ```bash
-cd ev3rt-base/base-workspace
+cd ev3rt-hrp2/base-workspace
 make app=loader
 ```
 
@@ -54,12 +69,12 @@ Copy `uImage` to the root directory of your SD card, and the installation of EV3
 
 # Step 4: Build a sample program (HelloEV3)
 
-Each folder in `ev3rt-sdk/workspace` contains an application project. Application can be built by the command `make app=<folder name>`.
+Each folder in `ev3rt-hrp2/sdk/workspace` contains an application project. Application can be built by the command `make app=<folder name>`.
 
 HelloEV3 in `helloev3` is a sample program which can be used to test many functions (e.g. sensors and motors) of EV3RT. Let's build it by:
 
 ```bash
-cd ev3rt-sdk/workspace
+cd ev3rt-hrp2/sdk/workspace
 make app=helloev3
 ```
 
@@ -67,9 +82,14 @@ An `app` file will be generated if build succeeded. It is an [ELF](https://en.wi
 
 # Step 5: Try it out!
 
-Insert the SD card into your EV3 brick and power it on. After a few seconds, you will see the EV3RT console [TODO:figure]. Press buttons to select `Load App`->`SD card`, and files in `ev3rt/apps` will be listed. Now choose the file of HelloEV3 to launch it.
+Launch HelloEV3:
 
-After HelloEV3 is started, a menu [TODO:figure] will appear.
+1. Insert the SD card into your EV3 brick and power it on.
+2. After a few seconds, you will see the EV3RT console.
+3. Press buttons to select `Load App`->`SD card`, and files in `ev3rt/apps` will be listed.
+4. Now choose the file of HelloEV3 to launch it.
+
+After HelloEV3 is started, a menu will appear.
 At first, the device connection must be configured.
 For example, if a ultrasonic sensor is connected to port 1, you should select `Connect device`->`Connect sensor`->`Sensor port 1`->`Ultrasonic` from the menu.
 Then you can choose `Test sensor`->`Sensor port 1` to test your sensor on EV3RT.
