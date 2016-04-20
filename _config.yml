@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:      pygments.rb
 
 # Permalinks
 permalink:        pretty
@@ -17,10 +17,13 @@ author:
   url:            https://github.com/YixiaoLi
   email:          liyixiao7@gmail.com
 
-paginate:         5
+#paginate:         5
 
 # Custom vars
 version:          Beta 6-2
 
 github:
   repo:           https://github.com/ev3rt-git
+
+# Gems
+gems: [jekyll-gist]
