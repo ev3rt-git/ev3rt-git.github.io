@@ -20,9 +20,9 @@ You can access the SD card by connecting EV3 to PC with a USB cable. Just place 
 
 ## How to connect to Bluetooth?
 
-Bluetooth will be enabled automatically when EV3RT is started. The device name is `Mindstorms EV3` and PIN code is `0000` by default and can be changed by editing `ev3rt/etc/rc.conf.ini` in the SD card. You can connect to your EV3 brick with the Bluetooth functionality provided by your OS (e.g. general Bluetooth support in Windows).
+Bluetooth will be enabled automatically when EV3RT is started. The device name is `Mindstorms EV3` and PIN code is `0000` by default and can be changed by editing `ev3rt/etc/rc.conf.ini` in the SD card.
 
-EV3RT supports standard Bluetooth serial port profile. You can connect to your EV3 brick with Bluetooth functionality
+EV3RT supports standard Bluetooth serial port profile, and you can connect to it with the Bluetooth functionality provided by your OS (e.g. general Bluetooth support in Windows).
 
 ## How to program with Bluetooth?
 
