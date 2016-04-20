@@ -22,32 +22,32 @@ You can refer to following guides to install these dependencies:
 
 * Ubuntu 14.04 (Trusty Tahr)
 
-```bash
+~~~bash
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo apt-get update
 sudo apt-get install gcc-arm-embedded u-boot-tools libboost1.55-all-dev
-```
+~~~
 
 * [Windows (Cygwin)](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvWin) [Japanese only for now]
 * [Mac OS X (El Captain)](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvMac) [Japanese only for now]
 
 # Step 1: Get the source code
 
-```bash
+~~~bash
 git clone https://github.com/ev3rt-git/ev3rt-hrp2
 cd ev3rt-hrp2
 git submodule init
 git submodule update
-```
+~~~
 
 # Step 2: Prepare the configurator
 
 Build the configurator from source code by:
 
-```bash
+~~~bash
 cd ev3rt-hrp2/cfg
 make
-```
+~~~
 Alternatively, pre-built binaries are also available for Windows and Mac OS X users:
 
 * [cfg 1.9.5 for Windows](https://www.toppers.jp/download.cgi/cfg-mingw-static-1_9_5.zip)
@@ -60,10 +60,10 @@ Extract the downloaded package and put the configurator binary (cfg or cfg.exe) 
 Following command will generate a `uImage` file if build succeeded.
 `uImage` is the bootable system image of EV3RT which includes components such as RTOS kernel, device drivers and the application loader.
 
-```bash
+~~~bash
 cd ev3rt-hrp2/base-workspace
 make app=loader
-```
+~~~
 
 Copy `uImage` to the root directory of your SD card, and the installation of EV3RT is finished!
 
@@ -73,10 +73,10 @@ Each folder in `ev3rt-hrp2/sdk/workspace` contains an application project. Appli
 
 HelloEV3 in `helloev3` is a sample program which can be used to test many functions (e.g. sensors and motors) of EV3RT. Let's build it by:
 
-```bash
+~~~bash
 cd ev3rt-hrp2/sdk/workspace
 make app=helloev3
-```
+~~~
 
 An `app` file will be generated if build succeeded. It is an [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) binary of your program, which can be executed by the application loader. Copy `app` to the `ev3rt/apps` folder (create it if not exists) on your SD card and, of course, you can rename the `app` file as you like.
 

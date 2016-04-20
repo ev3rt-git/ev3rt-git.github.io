@@ -31,11 +31,11 @@ The special file of Bluetooth can be opened by `ev3_serial_open_file(EV3_SERIAL_
 
 For example, you can implement a Bluetooth counter as follows:
 
-```c
+~~~c
 FILE *bt = ev3_serial_open_file(EV3_SERIAL_BT);
 for (int i = 1;; i++) {
     fprintf(bt, "Bluetooth counter %d\n", i);
     tlsp_tsk(1000); // Sleep for 1 sec
 }
-```
+~~~
 
