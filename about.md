@@ -18,13 +18,14 @@ EV3RT is an RTOS-based software platform that enables you to develop application
   - Dynamic memory allocation (e.g. malloc) powered by [TLSF](http://www.gii.upv.es/tlsf/) O(1) allocator
   - EV3RT C API and EV3RT C++ API for sensors, motors, e.t.c.
 * Current supported devices
-  - UART, I2C and analog sensors
+  - UART, I2C, IR and analog sensors
   - EV3 medium/large servo motors
-  - Bluetooth (serial port profile)
+  - Bluetooth PAN (Personal Area Network)
+  - Bluetooth SPP (Serial Port Profile)
   - USB (as mass storage device)
   - Speaker, LEDs, LCD and SD card
 * Small, light and fast!
-  - Platform image < 700 KB, memory footprint < 5 MB, boot time < 5 seconds
+  - Platform image < 1 MB, memory footprint < 5 MB, boot time < 5 seconds
 * Developer assistant
   - Workspace to manage and build application projects more easily
   - Loader to receive and execute app from USB or Bluetooth at run time
