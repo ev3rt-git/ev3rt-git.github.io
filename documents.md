@@ -38,7 +38,8 @@ make upload ip=10.0.11.1 from=myapp to=helloev3
 
 ## How to connect to Bluetooth?
 
-Bluetooth will be enabled automatically when EV3RT is started. The device name is `Mindstorms EV3` and PIN code is `0000` by default and can be changed by editing `ev3rt/etc/rc.conf.ini` in the SD card.
+Bluetooth will be enabled automatically when EV3RT is started by default.
+The device name is `Mindstorms EV3` and PIN code is `0000` by default and can be changed by editing `ev3rt/etc/rc.conf.ini` in the SD card.
 
 EV3RT supports standard Bluetooth SPP (Serial Port Profile) and PAN (Personal Area Network) services.
 You can connect to it with the Bluetooth functionality provided by your OS (e.g. general Bluetooth support in Windows).
@@ -71,3 +72,11 @@ for (int i = 1;; i++) {
 }
 ~~~
 
+## How to turn off Bluetooth?
+
+Bluetooth can be turned off by editing `ev3rt/etc/rc.conf.ini` in the SD card as follows.
+
+~~~bash
+[Bluetooth]
+TurnOff=1
+~~~

@@ -11,7 +11,7 @@ This step-by-step guide will show you how to install EV3RT, build a sample progr
 Some packages are required to be installed before installing EV3RT:
 
 * GCC (for host)
-* GCC ARM Embedded
+* GCC ARM Embedded (6-2017-q2 is best, 7.x may have some issues)
 * make
 * diffutils
 * perl
@@ -20,12 +20,11 @@ Some packages are required to be installed before installing EV3RT:
 
 You can refer to following guides to install these dependencies:
 
-* Ubuntu 14.04 (Trusty Tahr)
+* Ubuntu LTS
 
 ~~~bash
-sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
-sudo apt-get update
-sudo apt-get install gcc-arm-embedded u-boot-tools libboost1.55-all-dev
+wget http://ev3rt-git.github.io/public/ev3rt-prepare-ubuntu.sh
+sudo bash ev3rt-prepare-ubuntu.sh
 ~~~
 
 * [Windows (Cygwin)](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvWin) [Japanese only for now]
