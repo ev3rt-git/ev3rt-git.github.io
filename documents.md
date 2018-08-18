@@ -80,3 +80,5 @@ Bluetooth can be turned off by editing `ev3rt/etc/rc.conf.ini` in the SD card as
 [Bluetooth]
 TurnOff=1
 ~~~
+
+On startup of EV3RT, log message `Bluetooth is turned off.` will be shown instead of Bluetooth device address.
