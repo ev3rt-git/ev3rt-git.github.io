@@ -32,7 +32,7 @@ Prepare necessary environment for EV3RT on Ubuntu Linux.
 
 This script will:
 1. Remove binutils-arm-none-eabi and gcc-arm-none-eabi packages if installed.
-2. Install u-boot-tools and libboost1.55-all-dev packages when not installed.
+2. Install u-boot-tools and lib32stdc++6 packages when not installed.
 3. Install GNU Arm Embedded Toolchain (version: ${GCC_ARM_VER}) under ${GCC_ARM_DIR}.
 
 Please select:
@@ -51,8 +51,8 @@ done
 echo -e "\nRemove binutils-arm-none-eabi and gcc-arm-none-eabi:"
 apt-get remove binutils-arm-none-eabi gcc-arm-none-eabi -y
 
-echo -e "\nInstall u-boot-tools and libboost1.55-all-dev:"
-apt-get install u-boot-tools libboost1.55-all-dev -y
+echo -e "\nInstall u-boot-tools and lib32stdc++6:"
+apt-get install u-boot-tools lib32stdc++6 -y
 
 echo -e "\nInstall GNU Arm Embedded Toolchain:"
 cd ${WORK_DIR}

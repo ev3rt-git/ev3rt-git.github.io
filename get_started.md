@@ -16,7 +16,6 @@ Some packages are required to be installed before installing EV3RT:
 * diffutils
 * perl
 * U-Boot mkimage utility
-* libboost (if you want to build the configurator from source code)
 
 You can refer to following guides to install these dependencies:
 
@@ -41,13 +40,13 @@ git submodule update
 
 # Step 2: Prepare the configurator
 
-Build the configurator from source code by:
+Prepare the configurator binary by:
 
 ~~~bash
 cd ev3rt-hrp2/cfg
 make
 ~~~
-Alternatively, pre-built binaries are also available for Windows and Mac OS X users:
+Alternatively, Windows and Mac OS X users can also download pre-built binaries from:
 
 * [cfg 1.9.5 for Windows](https://www.toppers.jp/download.cgi/cfg-mingw-static-1_9_5.zip)
 * [cfg 1.9.5 for Mac OS X](https://www.toppers.jp/download.cgi/cfg-osx-static-1_9_5.tar.gz)
